@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ChatGPT Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/../src/css/chat.css">
+    <script defer src="/../src/js/chat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+<div id="mainLoader" class="loader-overlay">
+    <div class="loader-spinner-custom">
+        <span class="loader-dot"></span>
+        <span class="loader-dot"></span>
+        <span class="loader-dot"></span>
+        <span class="loader-dot"></span>
+    </div>
+</div>
+
+
+<div class="sidebar-mobile-overlay hidden"></div>
+<div class="sidebar">
+    <div class="sidebar-header">
+        <img src="/../src/img/openai_logo_dark2.png" alt="OpenAI Logo" class="logo">
+        <img src="/../src/img/sidebar.png" alt="Скрыть сайдбар" class="toggle-sidebar" id="toggleSidebarBtn">
+    </div>
+    <hr class="separator">
+    <div class="sidebar-buttons">
+        <button class="sidebar-btn" id="newChatBtn">
+            <img src="/../src/img/new_chat_white.png" alt="" class="newChatBtn">
+            <span>Новый чат</span>
+        </button>
+        <button class="sidebar-btn" id="themeToggleBtn">
+            <img src="/../src/img/switch_theme_white.png" alt="Сменить тему" class="theme-toggle">
+            <span>Сменить тему</span>
+        </button>
+    </div>
+    <hr class="separator" id="historySeparator">
+    <div id="chatHistoryContainer" class="chat-history">
+        <div id="noHistoryMessage" class="history-text history-text-dark">
+            <img src="/../src/img/clock_white.png" alt="clock">
+            <span>Здесь будет история</span>
+        </div>
+    </div>
+</div>
+
+<div class="main">
+    <header class="header">
+        <div class="header-content">
+            <button id="openSidebarBtn" class="sidebar-toggle-open" aria-label="Открыть сайдбар">
+                <img src="/../src/img/sidebar_open.png" alt="Открыть сайдбар" class="sidebar-toggle-open_icon">
+            </button>
+            <h1>ChatGPT 4.1</h1>
+        </div>
+        <hr class="header-sep">
+    </header>
+    <div class="chat-area" id="chatArea">
+    </div>
+    <div class="input-area">
+        <div class="input-wrapper">
+            <textarea id="chatInput" placeholder="Введите ваш запрос"  autocomplete="off"></textarea>
+
+            <button id="sendBtn" class="send-btn">
+                <img src="/../src/img/send_white_2.png" alt="Send">
+            </button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
